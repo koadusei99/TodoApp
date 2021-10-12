@@ -8,9 +8,9 @@ body {
 }
 body {
   font-family: "Montserrat", "Courier New", Courier, monospace;
-  --light-text: #dce4ff;
+  --light-text: #f1f4ff;
   --accent: #e451b5;
-  --bg: #052452;
+  --bg: rgba(5, 36, 82, 0.9);
   --border-radius: 8px;
   color: var(--light-text);
 }
@@ -21,14 +21,8 @@ body {
   display: grid;
   place-items: center;
   text-align: center;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    130deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(5, 36, 82, 1) 50%,
-    rgba(122, 4, 85, 1) 76%,
-    rgba(228, 81, 181, 1) 100%
-  );
+  background-image: url("./undraw_reminder_pa79.svg");
+  background-size: cover;
 }
 .todo {
   display: block;
