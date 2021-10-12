@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Montserrat", "Courier New", Courier, monospace;
+  --light-text: #dce4ff;
+  --accent: #e451b5;
+  --bg: #052452;
+  --border-radius: 8px;
+  color: var(--light-text);
+}
+
+.main {
+  height: 100vh;
+
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    130deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(5, 36, 82, 1) 50%,
+    rgba(122, 4, 85, 1) 76%,
+    rgba(228, 81, 181, 1) 100%
+  );
+}
+.todo {
+  display: block;
+  background-color: var(--bg);
+  padding: 2rem 2rem 5rem 2rem;
+  width: min(600px, 80%);
+  border-radius: var(--border-radius);
+  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.6);
+}
+.header {
+  font-size: 3rem;
+  font-weight: 800;
+  text-shadow: 2px 3px var(--accent);
+}
+#todoList {
+  padding: 0;
+  margin: 3rem auto;
+  text-align: left;
+  width: fit-content;
+}
+.listItem {
+  list-style: none;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0.5rem 0;
+}
+.listItem:hover {
+  cursor: pointer;
+}
+.listItem::before {
+  content: "⦿ ";
+  /* position: absolute;
+  left: 0px; */
+  color: var(--accent);
+}
+.form {
+  display: grid;
+  gap: 1.5rem;
+  grid-auto-flow: row;
+}
+#answer {
+  text-align: center;
+  padding: 0.8rem 0.6rem;
+  border: 2px solid var(--accent);
+  border-radius: var(--border-radius);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+#answer:focus {
+  border: 2px solid var(--accent);
+}
+#addButton {
+  padding: 1.5rem 0.6rem;
+  background-color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 800;
+  transform: translateY(0);
+  transition: transform 100ms ease;
+}
+#addButton:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+  background-color: #fc48c3;
+}
